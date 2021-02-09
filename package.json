@@ -5,14 +5,19 @@
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "nodemon": "^2.0.7"
+    "helmet": "^4.4.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "sequelize": "5"
   },
   "devDependencies": {},
   "scripts": {
     "dev": "nodemon ./src/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gen-model": "sequelize-auto -o \"./src/models\" -d setzero -h localhost -u root -p 3306 -x tak19215 -e mysql -C -a sequelize-config"
   },
   "author": "",
   "license": "ISC"
